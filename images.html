@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <nav>
+            <a href="index.html">Google Search</a>
+            <a href="advanced.html">Google Advanced Search</a>
+        </nav>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main>
+        <!-- شعار Google مع كلمة "Images" بجانبه -->
+        <div class="logo-container">
+            <img src="googlelogo_color_272x92dp.png" alt="Google Logo">
+            <span class="images-text">Images</span>
+        </div>
+        
+        <!-- شريط البحث -->
+        <form action="https://www.google.com/search" method="GET">
+            <div class="search-bar">
+                <input type="text" name="q" placeholder="Search Google Images" required>
+                <!-- الحقول المخفية الخاصة بنتائج الصور -->
+                <input type="hidden" name="tbm" value="isch">
+                <input type="hidden" name="sca_esv" value="1">
+            </div>
+            <div class="button-group">
+                <button type="submit" class="main-button">Google Image Search</button>
+            </div>
+        </form>
+
+        <!-- زر "ضربة حظ" -->
+        <div class="lucky-button">
+            <button 
+                type="button" 
+                onclick="window.location.href='https://www.google.com/search?tbm=isch&sca_esv=1&btnI=1&q=' + encodeURIComponent(document.querySelector('.search-bar input').value)">
+                I'm Feeling Lucky
+            </button>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>Google Clone © 2024</p>
+    </footer>
+</body>
+</html>

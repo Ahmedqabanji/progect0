@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <nav>
+            <a href="index.html">Google Search</a>
+            <a href="images.html">Google Image Search</a>
+        </nav>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main>
+        <h1>Advanced Search</h1>
+
+        <!-- نموذج البحث المتقدم -->
+        <form action="https://www.google.com/search" method="GET">
+            <!-- الحقل الأول: كلمات البحث (تحتوي على جميع الكلمات) -->
+            <div class="form-group">
+                <label for="all-words">All these words:</label>
+                <input type="text" id="all-words" name="q" placeholder="Enter words">
+            </div>
+
+            <!-- الحقل الثاني: الكلمات التي تحتوي على أي كلمة -->
+            <div class="form-group">
+                <label for="any-words">Any of these words:</label>
+                <input type="text" id="any-words" name="epq" placeholder="Enter words">
+            </div>
+
+            <!-- الحقل الثالث: اللغة -->
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <select name="hl" id="language">
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <!-- يمكنك إضافة المزيد من اللغات هنا -->
+                </select>
+            </div>
+
+            <!-- الحقل الرابع: النطاق الزمني -->
+            <div class="form-group">
+                <label for="time-range">Any time:</label>
+                <select name="tbs" id="time-range">
+                    <option value="">Any time</option>
+                    <option value="qdr:d">Past day</option>
+                    <option value="qdr:w">Past week</option>
+                    <option value="qdr:m">Past month</option>
+                    <option value="qdr:y">Past year</option>
+                </select>
+            </div>
+
+            <!-- زر البحث المتقدم -->
+            <button type="submit" class="search-button">Advanced Search</button>
+        </form>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>Google Clone © 2024</p>
+    </footer>
+
+</body>
+</html>
